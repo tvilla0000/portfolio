@@ -5,9 +5,153 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+input {
+  background-color: black;
+  color: white;
+}
+
+i:hover {
+  color: red;
+}
+
+.w3-row-padding img {
+  margin-bottom: 12px;
+}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+  width: 120px;
+  background: #222;
+}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {
+  margin-left: 120px;
+}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hide-li {
+    display: none;
+  }
+  .mobile-bord-bot {
+    border-bottom: 1px solid rgba(117, 117, 117, 1) !important;
+  }
+}
+
+.add-bord-bot {
+  border-bottom: 1px solid rgba(117, 117, 117, 1) !important;
+}
+
+.add-bord-top {
+  border-top: 1px solid rgba(117, 117, 117, 1) !important;
+  padding-top: 10px;
+}
+
+.gray-bord-bot {
+  border-bottom: 1px solid rgba(117, 117, 117, 1) !important;
+}
+
+.gray-bord-bot:last-child {
+  border: 1px solid transparent !important;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 720px;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+  background: rgba(10, 10, 10, 1);
+  margin: 0 0 20px;
+  border: 2px solid rgb(100, 11, 11);
+  border-radius: 10px;
+}
+
+.project-card:hover {
+  opacity: 1;
+}
+
+.project-link-ctnr {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.footer-link-ctnr {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.project-img {
+  max-width: 90%;
+  max-height: 400px;
+}
+
+.mobile-nav-btn {
+  padding: 5px 10px;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
+}
+
+.project-description {
+  width: 90%;
+  color: white;
+  font-size: 22px;
+}
+
+#HeadShot {
+  border: 3px solid rgb(100, 11, 11);
+  border-radius: 10px;
+}
+
+#main h1 {
+  text-shadow: 1.5px -2px rgb(100, 11, 11);
+}
+
+#myNavbar {
+  border: 1px solid rgb(100, 11, 11);
+}
+
+#network-links {
+  border: 2px solid rgb(100, 11, 11);
+  border-radius: 10px;
+}
+
+#submit-btn {
+  border: 2px solid rgb(100, 11, 11);
+  border-radius: 5px;
+}
+
+#GA-logo {
+  width: 5vw;
+  margin: 0 0 -10px 0;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import './App.css';
 
 class App extends React.Component {
@@ -20,7 +20,7 @@ class App extends React.Component {
 
   handleSubmit = async evt => {
     evt.preventDefault();
-    const templateId = 'template_zorBb3zy';
+    const templateId = 'template_7y3CQmN6';
     await this.sendFeedback(templateId, {subject_html: this.state.subject, message_html: this.state.message, from_name: this.state.name, reply_to: this.state.email});
     this.setState({ name: '', email: '', subject: '', message: '' });
     document.getElementById('name').value = '';
@@ -183,11 +183,7 @@ class App extends React.Component {
     </ul>
     <div className='w3-col add-bord-top' />
     <div className='w3-bar-block'></div>
-    <button className="w3-button w3-light-grey w3-padding-large  w3-section">
-      <i className="fa fa-download" />
-      &nbsp;
-
-    </button>
+  
   </div>
   
   {/* <!-- Main Portfolio Content--> */}

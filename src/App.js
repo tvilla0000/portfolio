@@ -1,5 +1,5 @@
 import React from "react";
-
+import resume from "./media/Resume.pdf";
 import "./App.css";
 
 class App extends React.Component {
@@ -86,7 +86,7 @@ class App extends React.Component {
             href="#projects"
             className="w3-bar-item w3-button w3-padding-large w3-hover-black"
           >
-            <i className="fa fa-eye w3-xxlarge"></i>
+            <i className="fa fa-rocket w3-xxlarge"></i>
             <p>PROJECTS</p>
           </a>
           <a
@@ -95,6 +95,14 @@ class App extends React.Component {
           >
             <i className="fa fa-envelope w3-xxlarge"></i>
             <p>CONTACT</p>
+          </a>
+          <a
+            href={resume}
+            target="_blank"
+            className="w3-bar-item w3-button w3-padding-large w3-hover-black"
+          >
+            <i className="fa fa-file-pdf-o w3-xxlarge"></i>
+            <p>RESUME</p>
           </a>
         </nav>
 
@@ -136,6 +144,14 @@ class App extends React.Component {
             >
               CONTACT
             </a>
+            <a
+              href={resume}
+              target="_blank"
+              className="w3-button mobile-nav-btn"
+              style={{ width: "25% !important" }}
+            >
+              RESUME
+            </a>
           </div>
         </div>
 
@@ -173,7 +189,7 @@ class App extends React.Component {
             </h2>
             <hr style={{ width: "200px" }} className="w3-opacity" />
 
-            <p style={{ fontSize: "20px" }}>
+            <p className="bio">
               Hello There! Thanks for checking out my Portfolio! Three years of
               high school robotics opened a new perspective to understanding how
               machines work and how to comunicate to them. This new perspective
@@ -190,6 +206,7 @@ class App extends React.Component {
               of technical problems!
             </p>
           </div>
+
           <div className="w3-padding-64 w3-content" id="skills">
             <h2
               className="w3-text-light-grey"
@@ -209,26 +226,90 @@ class App extends React.Component {
               <div className="w3-third">
                 <li className="w3-li gray-bord-bot"></li>
                 <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    src="https://www.geekstrick.com/wp-content/themes/geekstrick/assets/icons/javascript.svg"
+                    alt="Javascript"
+                  />
                   JavaScript
                 </li>
-                <li className="w3-li w3-text-white gray-bord-bot">React</li>
-                <li className="w3-li w3-text-white add-bord-bot">Python 3</li>
-                <li className="w3-li hide-li"></li>
-              </div>
-              <div className="w3-third">
-                <li className="w3-li gray-bord-bot hide-li"></li>
-                <li className="w3-li w3-text-white add-bord-bot">Node.js</li>
-                <li className="w3-li w3-text-white gray-bord-bot">HTML5</li>
-                <li className="w3-li w3-text-white gray-bord-bot">CSS3</li>
-                <li className="w3-li hide-li"></li>
-              </div>
-              <div className="w3-third">
-                <li className="w3-li gray-bord-bot hide-li"></li>
-                <li className="w3-li w3-text-white gray-bord-bot">Bootstrap</li>
                 <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="react"
+                    src="http://maxehnert.com/app/images/react.svg"
+                    alt="React"
+                  />
+                  React
+                </li>
+                <li className="w3-li w3-text-white add-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="python"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png"
+                    alt="Python"
+                  />
+                  Python 3
+                </li>
+                <li className="w3-li hide-li"></li>
+              </div>
+              <div className="w3-third">
+                <li className="w3-li gray-bord-bot hide-li"></li>
+                <li className="w3-li w3-text-white add-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="nodejs"
+                    src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+                    alt="Node.js"
+                  />
+                  Node.js
+                </li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
+                    alt="HTML5"
+                  />
+                  HTML5
+                </li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+                    alt="CSS3"
+                  />
+                  CSS3
+                </li>
+                <li className="w3-li hide-li"></li>
+              </div>
+              <div className="w3-third">
+                <li className="w3-li gray-bord-bot hide-li"></li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="bootstrap"
+                    src="data:image/png;base64,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"
+                    alt="Bootstrap"
+                  />
+                  Bootstrap
+                </li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="materialize"
+                    src="https://seeklogo.com/images/M/materialize-logo-0FCAD8A6F8-seeklogo.com.png"
+                    alt="Materialize"
+                  />
                   Materialize
                 </li>
-                <li className="w3-li w3-text-white gray-bord-bot">VS Code</li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    id="vscode"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png"
+                    alt="VS code"
+                  />
+                  VS Code
+                </li>
                 <li className="w3-li gray-bord-bot"></li>
               </div>
             </ul>
@@ -236,20 +317,80 @@ class App extends React.Component {
               <h5 className="w3-col w3-text-gray">Server-Side and Database</h5>
               <div className="w3-half">
                 <li className="w3-li gray-bord-bot"></li>
-                <li className="w3-li w3-text-white gray-bord-bot">Express</li>
                 <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="nodejs"
+                    src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+                    alt="express"
+                  />
+                  Express
+                </li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
+                    alt="PostgreSQL"
+                  />
                   PostgreSQL
                 </li>
-                <li className="w3-li w3-text-white gray-bord-bot">Mongoose</li>
-                <li className="w3-li w3-text-white add-bord-bot">MongoDB</li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="mongoose"
+                    src="https://camo.githubusercontent.com/add74f91a2bcd7370ee73971140a75ad4136baf1/687474703a2f2f6d6f6e676f64622d746f6f6c732e636f6d2f696d672f6d6f6e676f6f73652e706e67"
+                    alt="Mongoose"
+                  />
+                  Mongoose
+                </li>
+                <li className="w3-li w3-text-white add-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    src="https://cdn.iconscout.com/icon/free/png-256/mongodb-4-1175139.png"
+                    alt="MongoDB"
+                  />
+                  MongoDB
+                </li>
                 <li className="w3-li hide-li"></li>
               </div>
               <div className="w3-half">
                 <li className="w3-li gray-bord-bot hide-li"></li>
-                <li className="w3-li w3-text-white gray-bord-bot">OAuth</li>
-                <li className="w3-li w3-text-white gray-bord-bot">Passport</li>
-                <li className="w3-li w3-text-white gray-bord-bot">Amazon S3</li>
-                <li className="w3-li w3-text-white gray-bord-bot">Heroku</li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="OAuth"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Oauth_logo.svg/598px-Oauth_logo.svg.png"
+                    alt="OAuth"
+                  />
+                  OAuth
+                </li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="passportjs"
+                    src="https://cdn.glitch.com/project-avatar/0d184ee3-fd8d-4b94-acf4-b4e686e57375.png?2016-11-21T13:18:58.896Z"
+                    alt="Passport.js"
+                  />
+                  Passport
+                </li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="AWS"
+                    src="https://cdn.worldvectorlogo.com/logos/amazon-icon-1.svg"
+                    alt="AWS"
+                  />
+                  Amazon S3
+                </li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="heroku"
+                    src="https://icon-library.net/images/heroku-icon/heroku-icon-27.jpg"
+                    alt="Heroku"
+                  />
+                  Heroku
+                </li>
                 <li className="w3-li gray-bord-bot"></li>
               </div>
             </ul>
@@ -259,18 +400,54 @@ class App extends React.Component {
               </h5>
               <div className="w3-half">
                 <li className="w3-li gray-bord-bot"></li>
-                <li className="w3-li w3-text-white gray-bord-bot">Git</li>
-                <li className="w3-li w3-text-white gray-bord-bot">GitHub</li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png"
+                    alt="Git"
+                  />
+                  Git
+                </li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="github"
+                    src="https://image.flaticon.com/icons/svg/25/25231.svg"
+                    alt="Github"
+                  />
+                  GitHub
+                </li>
                 <li className="w3-li w3-text-white add-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="command-line"
+                    src="https://cdn2.iconfinder.com/data/icons/computer-network-12/512/consol-512.png"
+                    alt="Command Line"
+                  />
                   Command Line
                 </li>
                 <li className="w3-li hide-li"></li>
               </div>
               <div className="w3-half">
                 <li className="w3-li gray-bord-bot hide-li"></li>
-                <li className="w3-li w3-text-white gray-bord-bot">Trello</li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    id="trello"
+                    src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Trello-512.png"
+                    alt="trello"
+                  />
+                  Trello
+                </li>
 
-                <li className="w3-li w3-text-white gray-bord-bot">Figma</li>
+                <li className="w3-li w3-text-white gray-bord-bot">
+                  <img
+                    className="Skills-logos"
+                    src="https://cdn.worldvectorlogo.com/logos/figma-1.svg"
+                    alt="Figma"
+                  />
+                  Figma
+                </li>
                 <li className="w3-li gray-bord-bot"></li>
               </div>
             </ul>
@@ -419,7 +596,17 @@ class App extends React.Component {
                   {" "}
                 </i>{" "}
                 Email: &nbsp;{" "}
-                <a href="mailto:tvilla0000@gmail.com">tvilla0000@gmail.com</a>
+                <a
+                  href="mailto:tylervilla65@gmail.com"
+                  style={{ textDecoration: "none" }}
+                >
+                  tylervilla65@gmail.com
+                </a>
+              </p>
+              <p>
+                <i className="	fa fa-twitter fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+                Twitter: &nbsp;
+                <a href="https://twitter.com/TylerVilla11">Tyler Villa</a>
               </p>
             </div>
             <br />
@@ -457,10 +644,7 @@ class App extends React.Component {
                   rel="noopener noreferrer"
                   href="https://profiles.generalassemb.ly/profiles/tvilla01"
                 >
-                  <img
-                    src="https://ga-core.s3.amazonaws.com/cms/files/files/000/000/886/original/ga-logo-gear.png"
-                    id="GA-logo"
-                  />
+                  <i className="fa fa-address-card-o w3-hover-opacity w3-jumbo"></i>
                 </a>
               </div>
             </div>
